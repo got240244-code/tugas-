@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teknologi Komputer Modern</title>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="login-overlay" id="login-overlay">
+    <div class="login-box">
+      <h2 class="gradient-title">Portal Komputer</h2>
+      <p>Silakan login untuk mengakses publikasi teknologi komputer</p>
+      <form id="login-form">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Masukkan Username" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Masukkan Password" required>
+        </div>
+        <button type="submit" class="btn-login">Masuk Platform</button>
+      </form>
+    </div>
+  </div>
+
+  <audio id="bg-audio" loop preload="auto">
+    <source src="musik.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="music-toggle" id="music-toggle" title="Putar / Matikan Musik">
+    <i class="bi bi-volume-mute" id="music-icon"></i>
+  </div>
+
+  <video autoplay loop muted playsinline id="bg-video">
+    <source src="Video.mp4" type="video/mp4">
+  </video>       
+  
+  <div class="navigation" id="sidebar">
+    <div class="menu-toggle" id="btn-toggle" title="Buka/Tutup Menu">
+      <i class="bi bi-list"></i>
+    </div>
+
+    <ul>
+      <li class="list-item active" data-target="home-section">
+        <a href="#">
+          <span class="icon"><i class="bi bi-house"></i></span>
+          <span class="text">Home</span>
+        </a>
+      </li>
+      <li class="list-item" data-target="about-section">
+        <a href="#">
+          <span class="icon"><i class="bi bi-person"></i></span>
+          <span class="text">About</span>
+        </a>
+      </li>
+      <li class="list-item" data-target="contact-section">
+        <a href="#">
+          <span class="icon"><i class="bi bi-chat-dots"></i></span>
+          <span class="text">Contact</span>
+        </a>
+      </li>
+      <li class="list-item" data-target="blog-section">
+        <a href="#">
+          <span class="icon"><i class="bi bi-journal-text"></i></span>
+          <span class="text">Blog Makalah</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    
+    <div id="home-section" class="content-section active-content">
+      <div class="home-cards-container">
+        <div class="card-glass">
+          <span class="badge-bab">PORTAL ILMIAH & TEKNOLOGI</span>
+          <h1 class="card-title gradient-title">Perkembangan & Arsitektur Teknologi Komputer Modern</h1>
+          <p class="card-text">
+            Selamat datang di platform riset teknologi. Halaman ini menyajikan wawasan komprehensif mengenai arsitektur sistem komputer, perangkat keras, perangkat lunak, hingga masa depan komputasi terdistribusi dan kuantum.
+          </p>
+        </div>
+
+        <div class="card-glass highlight-card">
+          <span class="badge-bab purple-badge">MAKALAH ILMIAH UTAMA</span>
+          <h2 class="card-title">Komprehensif Arsitektur, Sistem Operasi, dan Tren Komputasi Masa Depan</h2>
+          <p class="card-text">
+            <strong>Penulis:</strong> Reza Aditya Saputra | <strong>Bidang Riset:</strong> Computer Architecture & Systems Engineering
+          </p>
+
+          <hr class="divider">
+
+          <h3 class="sub-title"><i class="bi bi-list-nested"></i> Daftar Isi Makalah (12 BAB Kompleks)</h3>
+          <div class="toc-grid">
+            <div class="toc-item" data-bab="bab-1"><strong>BAB I:</strong> Pendahuluan & Latar Belakang</div>
+            <div class="toc-item" data-bab="bab-2"><strong>BAB II:</strong> Arsitektur Dasar & Von Neumann</div>
+            <div class="toc-item" data-bab="bab-3"><strong>BAB III:</strong> Komponen Perangkat Keras (Hardware)</div>
+            <div class="toc-item" data-bab="bab-4"><strong>BAB IV:</strong> Perangkat Lunak & Sistem Operasi</div>
+            <div class="toc-item" data-bab="bab-5"><strong>BAB V:</strong> Memori & Hirarki Penyimpanan Data</div>
+            <div class="toc-item" data-bab="bab-6"><strong>BAB VI:</strong> Jaringan Komputer & Komunikasi Data</div>
+            <div class="toc-item" data-bab="bab-7"><strong>BAB VII:</strong> Komputasi Awan (Cloud) & Terdistribusi</div>
+            <div class="toc-item" data-bab="bab-8"><strong>BAB VIII:</strong> Keamanan Siber & Kriptografi Modern</div>
+            <div class="toc-item" data-bab="bab-9"><strong>BAB IX:</strong> Kecerdasan Buatan (AI) & Akselerasi GPU</div>
+            <div class="toc-item" data-bab="bab-10"><strong>BAB X:</strong> Internet of Things (IoT) & Edge Computing</div>
+            <div class="toc-item" data-bab="bab-11"><strong>BAB XI:</strong> Komputasi Kuantum & Era Pasca-Silicon</div>
+            <div class="toc-item" data-bab="bab-12"><strong>BAB XII:</strong> Kesimpulan, Implikasi, & Rekomendasi</div>
+          </div>
+
+          <button class="btn-read-more" id="go-to-blog">
+            Mulai Membaca Makalah Lengkap <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="blog-section" class="content-section">
+      <h1 class="gradient-title" style="font-size: 1.8rem; margin-bottom: 20px;">
+        <i class="bi bi-journal-richtext" style="color: #c084fc;"></i> Makalah Ilmiah Teknologi Komputer
+      </h1>
+
+      <div class="card-glass" id="bab-1">
+        <span class="badge-bab">BAB I</span>
+        <h2 class="card-title">Pendahuluan & Latar Belakang</h2>
+        <h3 class="sub-title">1.1 Latar Belakang Masalah</h3>
+        <p class="card-text">
+          Teknologi komputer telah mengalami transformasi yang sangat pesat sejak era penemuan tabung hampa hingga era mikroprosesor tingkat lanjut saat ini. Komputer bukan lagi sekadar alat hitung aritmatika dasar, melainkan pusat dari hampir seluruh infrastruktur modern, mulai dari komunikasi, industri perbankan, kesehatan, hingga transportasi berbasis otonom. Pertumbuhan kecepatan pemrosesan informasi yang dipicu oleh Hukum Moore memungkinkan komputer modern mengolah miliaran instruksi dalam hitungan detik.
+        </p>
+        <h3 class="sub-title">1.2 Rumusan Masalah</h3>
+        <ul class="content-list">
+          <li>Bagaimana evolusi dan susunan arsitektur dasar pada sistem komputer modern?</li>
+          <li>Bagaimana integrasi antara perangkat keras, perangkat lunak, dan jaringan membentuk komputasi terdistribusi?</li>
+          <li>Apa saja dampak sosial, ekonomi, dan tantangan keamanan siber yang dihadapi perkembangan teknologi komputer saat ini?</li>
+        </ul>
+        <h3 class="sub-title">1.3 Tujuan Penelitian</h3>
+        <p class="card-text">
+          Penelitian ini bertujuan untuk menguraikan fungsi dan cara kerja komponen utama sistem komputer modern, menganalisis perkembangan teknologi pemrosesan seperti komputasi awan dan mikroprosesor multi-core, serta merumuskan solusi mitigasi atas kendala keamanan siber.
+        </p>
+      </div>
+
+      <div class="card-glass" id="bab-2">
+        <span class="badge-bab">BAB II</span>
+        <h2 class="card-title">Arsitektur Dasar Komputer & Model Von Neumann</h2>
+        <h3 class="sub-title">2.1 Prinsip Arsitektur Von Neumann</h3>
+        <p class="card-text">
+          Secara umum, arsitektur komputer modern mengacu pada konsep arsitektur Von Neumann yang membagi komputer menjadi 4 bagian esensial: Central Processing Unit (CPU), Memori Utama (RAM), Perangkat Input/Output (I/O), serta Bus Sistem. CPU berfungsi sebagai otak yang mengeksekusi siklus Fetch-Decode-Execute secara terus-menerus.
+        </p>
+        <h3 class="sub-title">2.2 Arsitektur Harvard vs Von Neumann</h3>
+        <p class="card-text">
+          Berbeda dengan Von Neumann yang menggunakan bus tunggal untuk data dan instruksi, arsitektur Harvard memisahkan jalur bus memori data dan memori instruksi. Pemisahan ini memberikan peningkatan throughput eksekusi instruksi yang signifikan pada pemrosesan sinyal digital modern.
+        </p>
+      </div>
+
+      <div class="card-glass" id="bab-3">
+        <span class="badge-bab">BAB III</span>
+        <h2 class="card-title">Komponen Perangkat Keras (Hardware) Utama</h2>
+        <h3 class="sub-title">3.1 Unit Pemrosesan Sentral (CPU) & Multi-Core</h3>
+        <p class="card-text">
+          CPU modern terdiri dari jutaan hingga miliaran transistor yang dikemas dalam sirkuit terpadu. Implementasi arsitektur multi-core memungkinkan pemrosesan sejajar (parallel processing) secara komputasional untuk menangani beban kerja berat.
+        </p>
+        <h3 class="sub-title">3.2 GPU, TPU, dan Akselerator Perangkat Keras</h3>
+        <p class="card-text">
+          Unit Pemroses Grafis (GPU) dirancang dengan ribuan core kecil untuk memproses data matriks dan grafik secara simultan. Sementara Tensor Processing Unit (TPU) dikhususkan untuk akselerasi perhitungan matematika pada model pembelajaran mesin (Machine Learning).
+        </p>
+      </div>
+
+      <div class="card-glass" id="bab-4">
+        <span class="badge-bab">BAB IV</span>
+        <h2 class="card-title">Perangkat Lunak & Sistem Operasi</h2>
+        <h3 class="sub-title">4.1 Peran Sistem Operasi (OS)</h3>
+        <p class="card-text">
+          Sistem Operasi bertindak sebagai abstraksi antara perangkat keras dan aplikasi pengguna. OS mengelola alokasi CPU, manajemen memori virtual, akses berkas, serta keamanan eksekusi proses melalui penjadwalan CPU (CPU Scheduling).
+        </p>
+        <h3 class="sub-title">4.2 Abstraksi Kernel & Perangkat Penggerak (Drivers)</h3>
+        <p class="card-text">
+          Kernel merupakan inti dari OS yang berjalan pada moda teringgi (kernel mode). Driver perangkat lunak menterjemahkan perintah umum dari sistem operasi menjadi instruksi spesifik yang dimengerti oleh perangkat keras fisik.
+        </p>
+      </div>
+
+      <div class="card-glass" id="bab-5">
+        <span class="badge-bab">BAB V</span>
+        <h2 class="card-title">Memori & Hirarki Penyimpanan Data</h2>
+        <h3 class="sub-title">5.1 Hirarki Memori (Register, Cache, RAM, Storage)</h3>
+        <p class="card-text">
+          Hirarki memori dirancang untuk menyeimbangkan antara kecepatan pemrosesan dan biaya operasional. Register CPU menyediakan kecepatan tertinggi, diikuti oleh Cache L1/L2/L3, RAM utama (DDR4/DDR5), dan penyimpanan sekunder NVMe SSD.
+        </p>
+        <h3 class="sub-title">5.2 Penyimpanan Solid-State (SSD) vs NVMe Protocol</h3>
+        <p class="card-text">
+          Teknologi NVMe (Non-Volatile Memory Express) memanfaatkan jalur pendaftaran bus PCIe langsung untuk menghapus hambatan kecepatan (bottleneck) yang sebelumnya ditemukan pada protokol SATA lama.
+        </p>
+      </div>
+
+      <div class="card-glass" id="bab-6">
+        <span class="badge-bab">BAB VI</span>
+        <h2 class="card-title">Jaringan Komputer & Komunikasi Data</h2>
+        <h3 class="sub-title">6.1 Model OSI Layer & TCP/IP</h3>
+        <p class="card-text">
+          Komunikasi data antarkomputer diatur oleh standar arsitektur berlapis model OSI (7 layer) dan arsitektur praktis TCP/IP yang membagi fungsionalitas jaringan menjadi Application, Transport, Internet, dan Network Access Layer.
+        </p>
+        <h3 class="sub-title">6.2 Perutean (Routing) & Infrastruktur Pita Lebar</h3>
+        <p class="card-text">
+          Perangkat router mentransmisikan paket data antarjaringan menggunakan algoritma pencarian jalur terpendek (seperti BGP dan OSPF) melalui jaringan kabel serat optik global maupun konektivitas nirkabel 5G/6G.
+        </p>
+      </div>
+
+      <div class="card-glass" id="bab-7">
+        <span class="badge-bab">BAB VII</span>
+        <h2 class="card-title">Komputasi Awan (Cloud Computing) & Terdistribusi</h2>
+        <h3 class="sub-title">7.1 Model Layanan: IaaS, PaaS, dan SaaS</h3>
+        <p class="card-text">
+          Komputasi awan menawarkan akses sumber daya komputasi sesuai permintaan secara terdistribusi. Layanan dikelompokkan menjadi Infrastructure as a Service (IaaS), Platform as a Service (PaaS), dan Software as a Service (SaaS).
+        </p>
+        <h3 class="sub-title">7.2 Virtualisasi & Kontainerisasi (Docker/Kubernetes)</h3>
+        <p class="card-text">
+          Teknologi virtualisasi memungkinkan beberapa sistem operasi berjalan di atas satu hypervisor fisik. Kontainerisasi meningkatkan efisiensi ini dengan menautkan dependensi aplikasi tanpa overhead OS penuh.
+        </p>
+      </div>
+
+      <div class="card-glass" id="bab-8">
+        <span class="badge-bab">BAB VIII</span>
+        <h2 class="card-title">Keamanan Siber & Kriptografi Modern</h2>
+        <h3 class="sub-title">8.1 Ancaman Siber Modern & Ransomware</h3>
+        <p class="card-text">
+          Ancaman siber modern telah berkembang dari gangguan sederhana menjadi enkripsi berbahaya (Ransomware) dan rekayasa sosial (Social Engineering) yang mengincar integritas data organisasi secara global.
+        </p>
+        <h3 class="sub-title">8.2 Prinsip Kriptografi & Zero Trust Architecture (ZTA)</h3>
+        <p class="card-text">
+          Penerapan enkripsi kunci simetris (AES-256) dan asimetris (RSA/ECC) dikombinasikan dengan arsitektur Zero Trust ("Never Trust, Always Verify") menjamin autentikasi ketat di setiap titik akses sistem.
+        </p>
+      </div>
+
+      <div class="card-glass" id="bab-9">
+        <span class="badge-bab">BAB IX</span>
+        <h2 class="card-title">Kecerdasan Buatan (AI) & Akselerasi Pemrosesan</h2>
+        <h3 class="sub-title">9.1 Peran Hardware Komputer dalam Pembelajaran Mesin</h3>
+        <p class="card-text">
+          Perkembangan pemodelan AI berbasis Deep Learning mensyaratkan pemrosesan matriks skala besar. Penggunaan arsitektur komputer terakselerasi memungkinkan pelatihan model bahasa raksasa (LLM) dapat diselesaikan dalam kurun waktu realistis.
+        </p>
+        <h3 class="sub-title">9.2 Arsitektur Neural Processing Unit (NPU)</h3>
+        <p class="card-text">
+          NPU dirancang khusus pada chip konsumen modern (SoC) untuk menjalankan pemrosesan kalkulasi AI lokal berdaya rendah langsung pada perangkat pengguna tanpa bergantung penuh pada server awan.
+        </p>
+      </div>
+
+      <div class="card-glass" id="bab-10">
+        <span class="badge-bab">BAB X</span>
+        <h2 class="card-title">Internet of Things (IoT) & Edge Computing</h2>
+        <h3 class="sub-title">10.1 Ekosistem Sensorik IoT</h3>
+        <p class="card-text">
+          Internet of Things merujuk pada miliaran perangkat fisik yang terhubung ke jaringan internet, mengumpulkan dan berbagi data lingkungan melalui sensor terintegrasi dan mikrokontroler hemat energi.
+        </p>
+        <h3 class="sub-title">10.2 Konsep Edge Computing</h3>
+        <p class="card-text">
+          Edge Computing memindahkan komputasi dan pemrosesan data dari pusat data awan ke tepi jaringan (dekat dengan perangkat IoT), sehingga mengurangi latensi dan menghemat pemakaian bandwidth komunikasi.
+        </p>
+      </div>
+
+      <div class="card-glass" id="bab-11">
+        <span class="badge-bab">BAB XI</span>
+        <h2 class="card-title">Komputasi Kuantum & Era Pasca-Silicon</h2>
+        <h3 class="sub-title">11.1 Prinsip Qubit, Superposisi, dan Entanglement</h3>
+        <p class="card-text">
+          Komputer kuantum memanfaatkan bit kuantum (qubit) yang mampu berada dalam keadaan superposisi (0 dan 1 bersamaan) serta keterikatan kuantum (entanglement) untuk menyelesaikan perhitungan kompleks jauh melampaui kemampuan superkomputer klasik.
+        </p>
+        <h3 class="sub-title">11.2 Tantangan Era Pasca-Silicon</h3>
+        <p class="card-text">
+          Mendekati batas fisik transistor berbasis silikon, industri beralih meneliti material baru seperti Graphene dan arsitektur Optoneuro-morphic untuk menjaga keberlanjutan peningkatan efisiensi komputasi.
+        </p>
+      </div>
+
+      <div class="card-glass" id="bab-12" style="border-left: 4px solid #a855f7;">
+        <span class="badge-bab">BAB XII</span>
+        <h2 class="card-title">Kesimpulan, Implikasi, & Rekomendasi</h2>
+        <h3 class="sub-title">12.1 Kesimpulan Penelitian</h3>
+        <p class="card-text">
+          Teknologi komputer merupakan tulang punggung peradaban digital modern. Perpaduan antara pemrosesan perangkat keras yang makin bertenaga, arsitektur sistem terdistribusi, dan ekosistem perangkat lunak terintegrasi telah mengubah tata cara kerja manusia. Keberhasilan implementasi teknologi sangat ditentukan oleh efisiensi arsitektur dan perlindungan keamanannya.
+        </p>
+        <h3 class="sub-title">12.2 Implikasi Sosial & Ekonomi</h3>
+        <p class="card-text">
+          Otomatisasi berbasis komputer mendefinisikan ulang lanskap lapangan kerja global dan efisiensi industri, menciptakan tuntutan baru akan keterampilan literasi digital dan adaptasi keamanan data personal.
+        </p>
+        <h3 class="sub-title">12.3 Rekomendasi & Saran Masa Depan</h3>
+        <p class="card-text">
+          Diharapkan para pengembang teknologi dan praktisi TI terus meningkatkan standar enkripsi kriptografi aman-kuantum (Post-Quantum Cryptography), beralih ke arsitektur komputasi ramah energi (Green Computing), serta memprioritaskan keamanan berbasis Zero Trust secara menyeluruh.
+        </p>
+      </div>
+
+    </div>
+
+    <div id="about-section" class="content-section">
+      <div class="card-glass profile-card">
+        <div class="profile-header">
+          <div class="avatar-wrapper">
+            <div class="avatar-box">
+              <i class="bi bi-person-fill"></i>
+            </div>
+            <div class="avatar-badge">
+              <i class="bi bi-patch-check-fill"></i>
+            </div>
+          </div>
+          <h2 class="profile-name-title">Profil Pembuat</h2>
+          <span class="profile-subtitle">Computer Science & Hardware Researcher</span>
+        </div>
+
+        <div class="profile-list">
+          <div class="profile-item">
+            <div class="profile-item-icon"><i class="bi bi-person"></i></div>
+            <div class="profile-item-content">
+              <span class="label">Nama Lengkap</span>
+              <span class="value">Reza Aditya Saputra</span>
+            </div>
+          </div>
+
+          <div class="profile-item">
+            <div class="profile-item-icon"><i class="bi bi-info-circle"></i></div>
+            <div class="profile-item-content">
+              <span class="label">Tentang</span>
+              <span class="value">Computer System Architecture & Software Engineering Developer</span>
+            </div>
+          </div>
+
+          <div class="profile-item">
+            <div class="profile-item-icon"><i class="bi bi-at"></i></div>
+            <div class="profile-item-content">
+              <span class="label">Reserved Username</span>
+              <span class="value">Luxxy187</span>
+              <span class="sub-value">ID: 0606</span>
+            </div>
+          </div>
+
+          <div class="profile-item">
+            <div class="profile-item-icon"><i class="bi bi-telephone"></i></div>
+            <div class="profile-item-content">
+              <span class="label">Telepon</span>
+              <span class="value">+62 823-2197-8414</span>
+            </div>
+          </div>
+
+          <div class="profile-item">
+            <div class="profile-item-icon"><i class="bi bi-link-45deg"></i></div>
+            <div class="profile-item-content">
+              <span class="label">Tautan Eksternal</span>
+              <span class="value">https://ffshare.garena.com/?region=ID&lang=ind</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div id="contact-section" class="content-section">
+      <div class="card-glass">
+        <span class="badge-bab">KONTAK & KOLABORASI</span>
+        <h2 class="card-title">Hubungi Kami</h2>
+        <p class="card-text">
+          Tertarik untuk berkolaborasi dalam riset arsitektur komputer atau ingin berkonsultasi seputar pengembangan sistem TI? Silakan hubungi kami melalui surel di <strong>got240244@.com</strong> atau telepon <strong>+62 823-2197-8414</strong>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
